@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Upload CSV File</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+<body>
+	<div class="container mt-5">
+		<form method="POST" th:action="@{/upload-csv-file}" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="file">Select a CSV file</label>
+				<input type="file" name="file" class="form-control-file" id="file" accept=".csv">
+			</div>
+			<button type="submit" class="btn btn-primary">submit</button>
+		</form>
+
+	</div>
+
+	<div class="container mt-5">
+		<form method="POST" th:action="@{/upload-excel-file}" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="file">Select a Excel file</label>
+				<input type="file" name="file" class="form-control-file" id="file" accept=".xlsx">
+			</div>
+			<button type="submit" class="btn btn-primary">submit</button>
+		</form>
+	</div>
+	
+	
+	<div class="container mt-5">
+		<form method="POST" th:action="@{/test}" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="file">test</label>
+				<input type="file" name="file" class="form-control-file" id="file" accept=".xlsx">
+			</div>
+			<button type="submit" class="btn btn-primary">submit</button>
+		</form>
+	</div>
+	
+		
+	</div>
+
+	<div class="container mt-5">
+		<button a href="/database">list of employee</a></button>
+	</div>
+
+	<div class="container mt-5">
+		<form method="POST" th:action="@{/upload-image-file}" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="file">select a image</label>
+				<input type="file" name="file" class="form-control-file" id="file" accept="image/*">
+			</div>
+			<button type="submit" class="btn btn-primary">submit</button>
+		</form>
+
+	</div>
+
+
+	<!-- Bootstrap JS (optional) -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+</body>
+
+</html>

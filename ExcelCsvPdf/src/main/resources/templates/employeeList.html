@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                 <th>email</th>
+                  <th>phoneNo</th>
+                <!-- Add more table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${employeeList}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.firstname}"></td> <!-- Access firstname property -->
+                <td th:text="${employee.lastname}"></td>
+                 <td th:text="${employee.email}"></td>
+                  <td th:text="${employee.phoneNo}"></td>
+                <!-- Add more table cells as needed -->
+            </tr>
+        </tbody>
+    </table>
+    
+    <button><a href="http://localhost:8080/export-to-pdf" class="btn btn-primary">Download PDF File</a></button>
+ <button><a href="http://localhost:8080/export-to-excel" class="btn btn-primary">Download Excel File</a></button>
+</body>
+</html>
